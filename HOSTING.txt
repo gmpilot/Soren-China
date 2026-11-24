@@ -1,0 +1,23 @@
+Soren website
+Hosting and catalogue updates
+
+Publish to your domain
+
+1. In your hosting account, add your domain and follow the provider's instructions to point the domain to your hosting account. Enable HTTPS for the domain.
+2. Extract the website ZIP on your computer. Find the folder containing index.html. Upload its contents to the document root assigned to your domain, often named public_html. Place index.html directly in that directory. You can also put the site in a subfolder, such as public_html/catalogue, to serve it at /catalogue/.
+3. Keep the folders, spelling and capitalisation exactly as supplied. The site uses relative paths for its photographs, scripts and PDF. A static host can serve the files directly without a build step.
+4. Open the domain over HTTPS on both a phone and a desktop. Open a product in each collection, try an enquiry and open the downloadable catalogue. If the site opens but a picture or PDF is missing, check that its folder uploaded intact.
+
+Update a product
+
+Edit assets/products.js in a plain-text editor. Find the item by its unique product code. To add an item, copy one entry in that collection, give it a new code and update its name, description, family and price information. Use exactly one of the collection keys fragrances, babywear or coffee. Keep quotation marks, commas and brackets in the same format as the existing entries.
+
+Product photos are in assets/products/. The image path in each entry is relative to index.html. Use a numeric USD price and minimum order when you have a confirmed quote. Follow an existing quote-only entry for undisclosed prices. The two coffee ranges are collection prices. Update the corresponding PDF in catalogues/ separately if prices or products change. Upload the changed files and refresh the site.
+
+Update enquiries
+
+The main enquiry button opens WhatsApp with the buyer's message ready for review and sending. In config.js, window.SOREN_WHATSAPP sets the business number. Use the full international number as digits only, including the country code. The current contact is Soren Guo at +86 191 3978 7837.
+
+The same file holds three business Facebook Page addresses in window.SOREN_CONTACTS. To use a different Page, replace the full HTTPS address for the matching collection. If you change the WhatsApp number, also update the fallback WhatsApp links and the displayed number in index.html. After uploading, open a product enquiry and check the contact destination and product code.
+
+The supplied catalogue contains 35 fragrances, 52 babywear references and 18 coffee machines. Keep a copy of the ZIP before replacing the live files.
